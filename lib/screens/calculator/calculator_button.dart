@@ -6,14 +6,14 @@ class CalculatorButton extends StatelessWidget {
   final Color backgroundColor;
   final Color textColor;
   final String digit;
-  final Function x;
+  final Function onClick;
 
   const CalculatorButton(
       {super.key,
       this.flex = 1,
       this.backgroundColor = CalculatorColors.grey,
       this.textColor = CalculatorColors.darkBlue,
-      required this.x,
+      required this.onClick,
       required this.digit});
 
   @override
@@ -21,17 +21,17 @@ class CalculatorButton extends StatelessWidget {
     return Expanded(
         flex: flex,
         child: Container(
-          margin: EdgeInsets.all(8),
+          margin: EdgeInsets.all(4),
           child: ElevatedButton(
               style: ButtonStyle(
                   shape: WidgetStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16))),
+                      borderRadius: BorderRadius.circular(8))),
                   backgroundColor: WidgetStateProperty.all(backgroundColor)),
               onPressed: () {
                 if(digit == "="){
-                  x();
+                  onClick();
                 }else {
-                  x(digit);
+                  onClick(digit);
                 }
 
               },
