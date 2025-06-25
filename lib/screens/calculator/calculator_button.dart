@@ -28,14 +28,13 @@ class CalculatorButton extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8))),
                   backgroundColor: WidgetStateProperty.all(backgroundColor)),
               onPressed: () {
-                digit == "=" ? onClick() : onClick(digit);
-                // if (digit == "=") {
-                // } else {}
+                if (digit == "=") onClick();
+                else onClick(digit);
               },
               child: Text(
                 digit,
                 style: CalculatorStyles.darkBlue32Medium
-                    .copyWith(color: textColor),
+                    .copyWith(color: textColor, fontWeight: FontWeight.bold),
               )),
         ));
   }

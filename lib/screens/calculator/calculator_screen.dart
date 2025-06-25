@@ -229,6 +229,7 @@ class _CalculatorState extends State<Calculator> {
      setState(() {});
     }
 
+    print("saved operator = $savedOperator, lhs = $lhs");
   }
 
 
