@@ -29,8 +29,8 @@ class _CalculatorState extends State<Calculator> {
                 width: double.infinity,
                 child: Text(
                   result,
-                  textAlign: TextAlign.center,
-                  style: CalculatorStyles.white48Medium.copyWith(fontWeight: FontWeight.w600),
+                  textAlign: TextAlign.start,
+                  style: CalculatorStyles.white48Medium.copyWith(fontSize: 50),
                 ),
               ),
             ),

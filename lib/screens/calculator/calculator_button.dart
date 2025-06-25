@@ -11,7 +11,7 @@ class CalculatorButton extends StatelessWidget {
   const CalculatorButton(
       {super.key,
       this.flex = 1,
-      this.backgroundColor = CalculatorColors.grey,
+      this.backgroundColor = CalculatorColors.lightBlue,
       this.textColor = CalculatorColors.darkBlue,
       required this.onClick,
       required this.digit});
@@ -21,7 +21,7 @@ class CalculatorButton extends StatelessWidget {
     return Expanded(
         flex: flex,
         child: Container(
-          margin: EdgeInsets.all(8),
+          margin: EdgeInsets.all(12),
           child: ElevatedButton(
               style: ButtonStyle(
                   shape: WidgetStateProperty.all(RoundedRectangleBorder(
