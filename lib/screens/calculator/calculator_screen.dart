@@ -29,8 +29,8 @@ class _CalculatorState extends State<Calculator> {
                 width: double.infinity,
                 child: Text(
                   result,
-                  textAlign: TextAlign.end,
-                  style: CalculatorStyles.white48Medium,
+                  textAlign: TextAlign.center,
+                  style: CalculatorStyles.white48Medium.copyWith(fontWeight: FontWeight.w600),
                 ),
               ),
             ),
@@ -229,7 +229,7 @@ class _CalculatorState extends State<Calculator> {
      setState(() {});
     }
 
-    print("result = $result, saved operator = $savedOperator, lhs = $lhs");
+    print("saved operator = $savedOperator, lhs = $lhs");
   }
 
 

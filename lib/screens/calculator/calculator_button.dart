@@ -21,24 +21,20 @@ class CalculatorButton extends StatelessWidget {
     return Expanded(
         flex: flex,
         child: Container(
-          margin: EdgeInsets.all(4),
+          margin: EdgeInsets.all(8),
           child: ElevatedButton(
               style: ButtonStyle(
                   shape: WidgetStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8))),
                   backgroundColor: WidgetStateProperty.all(backgroundColor)),
               onPressed: () {
-                if(digit == "="){
-                  onClick();
-                }else {
-                  onClick(digit);
-                }
-
+                if (digit == "=") onClick();
+                else onClick(digit);
               },
               child: Text(
                 digit,
                 style: CalculatorStyles.darkBlue32Medium
-                    .copyWith(color: textColor),
+                    .copyWith(color: textColor, fontWeight: FontWeight.bold),
               )),
         ));
   }
